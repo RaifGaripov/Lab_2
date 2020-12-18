@@ -19,16 +19,28 @@ public class Triangle implements Shape {
     @Override
     public double calcArea() {
         double p = calcPerimeter() / 2;
-        return Math.sqrt(p * (p - this.side1) * (p - this.side2) * (p - this.side3));
+        return Math.sqrt(p * (p - side1) * (p - side2) * (p - side3));
     }
 
     @Override
     public double calcPerimeter() {
-        return this.side1 + this.side2 + this.side3;
+        return side1 + side2 + side3;
+    }
+
+    public double getSide1() { return side1; }
+
+    public double getSide2() {
+        return side2;
+    }
+
+    public double getSide3() {
+        return side3;
     }
 
     @Override
-    public String name() {
-        return "Треугольник";
+    public String toString() {
+        return "Triangle (a = " + side1 + ", b = " + side2 + ", c = " + side3 + "):\n" +
+                "Area = " + calcArea() + "\n" +
+                "Perimeter = " + calcPerimeter() + "\n";
     }
 }

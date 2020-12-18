@@ -15,17 +15,26 @@ public class Rectangle implements Shape {
 
     @Override
     public double calcArea() {
-        return this.side1 * this.side2;
+        return side1 * side2;
     }
 
     @Override
     public double calcPerimeter() {
-        return (this.side1 + this.side2) * 2;
+        return (side1 + side2) * 2;
     }
 
+    public double getSide1() {
+        return side1;
+    }
+
+    public double getSide2() {
+        return side2;
+    }
     @Override
-    public String name() {
-        return "Прямоугольник";
+    public String toString() {
+        return "Rectangle (a = " + side1 + ", b = " + side2 + "):\n" +
+                "Area = " + calcArea() + "\n" +
+                "Perimeter = " + calcPerimeter() + "\n";
     }
 }
 

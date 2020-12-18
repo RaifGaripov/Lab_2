@@ -12,16 +12,22 @@ public class Square implements Shape {
 
     @Override
     public double calcArea() {
-        return Math.pow(this.side, 2);
+        return Math.pow(side, 2);
     }
 
     @Override
     public double calcPerimeter() {
-        return 4 * this.side;
+        return 4 * side;
+    }
+
+    public double getSide() {
+        return side;
     }
 
     @Override
-    public String name() {
-        return "Квадрад";
+    public String toString() {
+        return "Square (a = " + side + "):\n" +
+                "Area = " + calcArea() + "\n" +
+                "Perimeter = " + calcPerimeter() + "\n";
     }
 }
